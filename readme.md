@@ -2386,7 +2386,7 @@ module.exports = prodConfig;
 
 ### Library的打包：库代码通过webpack进行打包
 
-仓库源码 【41】
+仓库源码 【[41](https://github.com/wudiufo/WebPack4-study/tree/master/library%2041)】
 
 在 webpack.config.js 中：
 
@@ -2443,7 +2443,7 @@ npm i + 库名
 
 渐进式网络应用程序，PWA 可以用来做很多事。其中最重要的是，在**离线(offline)**时应用程序能够继续运行功能。这是通过使用名为 [Service Workers](https://developers.google.com/web/fundamentals/primers/service-workers/) 的 web 技术来实现的。线上环境时才用到pwa,开发时不需要
 
-仓库源码 【42】
+仓库源码 【[42](https://github.com/wudiufo/WebPack4-study/tree/master/lesson%2042)】
 
 安装：
 
@@ -2509,7 +2509,7 @@ if ('serviceWorker' in navigator) { //如果浏览器支持serviceWorker，就�
 
 [TypeScript](https://www.typescriptlang.org/) 是 JavaScript 的超集，为其增加了类型系统，可以编译为普通 JavaScript 代码。这篇指南里我们将会学习是如何将 webpack 和 TypeScript 进行集成。
 
-仓库源码 【43】
+仓库源码 【[43](https://github.com/wudiufo/WebPack4-study/tree/master/type-script)】
 
 安装：
 
@@ -2571,7 +2571,7 @@ npm install --save-dev @types/lodash
 
 ### 使用 WebpackDevServer 实现请求转发
 
-仓库源码 【44】
+仓库源码 【[44](https://github.com/wudiufo/WebPack4-study/tree/master/lesson%2044)】
 
 安装：
 
@@ -2631,7 +2631,7 @@ devServer: {
 
 ###  WebpackDevServer 解决单页面应用路由问题
 
-仓库源码 【45】
+仓库源码 【[45](https://github.com/wudiufo/WebPack4-study/tree/master/lesson%2045)】
 
 安装：
 
@@ -2676,7 +2676,7 @@ devServer: {//配置只在开发时有效，上线时后端也需配置
 
 ### EsLint 在 Webpack 中的配置
 
-仓库源码 【46】
+仓库源码 【[46](https://github.com/wudiufo/WebPack4-study/tree/master/lesson%2046)】
 
 安装：
 
@@ -2736,7 +2736,7 @@ rules: [{
 
 ### 提升 webpack 打包速度的方法
 
-仓库源码 【47】
+仓库源码 【[47](https://github.com/wudiufo/WebPack4-study/tree/master/lesson%2047)】
 
 #### 1.跟上技术的迭代（Node，Npm，Yarn）
 
@@ -2746,7 +2746,7 @@ rules: [{
 
 #### 4.resolve 参数合理配置
 
-   仓库源码 【48】
+   仓库源码 【[48](https://github.com/wudiufo/WebPack4-study/tree/master/lesson%2048)】
 
 引入资源文件写后缀，像 图片文件（.jpg, .png, .svg），逻辑代码配置在extensions中:extensions: ['.js', '.jsx']
 
@@ -2754,7 +2754,7 @@ rules: [{
 
 详细请看官方文档：[dll-plugin](https://webpack.js.org/plugins/dll-plugin/#root)
 
-仓库源码 【49】
+仓库源码 【[49](https://github.com/wudiufo/WebPack4-study/tree/master/lesson%2049)】
 
 实现第三方模块只打包一次
 
@@ -2971,7 +2971,7 @@ new ParallelUglifyPlugin({
 
 配置多个 entry 里的 html 页面，用HtmlWebpackPlugin 插件，将打包好的j多个js分别插入到对应的html页面中。
 
-仓库源码 【410】
+仓库源码 【[410](https://github.com/wudiufo/WebPack4-study/tree/master/lesson%20410)】
 
 在 webpack.common.js 中：
 
@@ -3083,7 +3083,7 @@ module.exports = configs
 
 ###  如何编写一个 Loader
 
-仓库源码 【51】
+仓库源码 【[51](https://github.com/wudiufo/WebPack4-study/tree/master/make-loader%2051)】
 
 ```bash
 mkdir make-loader
@@ -3137,7 +3137,7 @@ module.exports = {
 
 ###  如何编写一个 Plugin
 
-仓库源码 【52】
+仓库源码 【[52](https://github.com/wudiufo/WebPack4-study/tree/master/plugin%2052)】
 
 
 
@@ -3149,7 +3149,7 @@ module.exports = {
 
 **应对 webpack 原理面试必备：**
 
-仓库源码 【53】
+仓库源码 【[53](https://github.com/wudiufo/WebPack4-study/tree/master/bundler%2053)】
 
 安装 ：
 
@@ -3167,13 +3167,13 @@ npm install @babel/preset-env --save
 
 ### Bundler 源码编写（Dependencies Graph）
 
-仓库源码 【54】
+仓库源码 【[54](https://github.com/wudiufo/WebPack4-study/tree/master/bundler%2054)】
 
 ---
 
 ### Bundler 源码编写（生成代码）
 
-仓库源码 【55】
+仓库源码 【[55](https://github.com/wudiufo/WebPack4-study/tree/master/bundler%2055)】
 
 
 
@@ -3181,7 +3181,7 @@ npm install @babel/preset-env --save
 
 ### 通过CreateReactApp深入学习Webpack配置
 
-仓库源码 【56】
+仓库源码 【[56](https://github.com/wudiufo/WebPack4-study/tree/master/my-app56)】
 
 详细请看官方文档：[CreateReactApp](https://facebook.github.io/create-react-app/docs/getting-started) 
 
@@ -3205,6 +3205,6 @@ npm run eject
 
 ### Vue-Cli 3.0
 
-仓库源码 【57】
+仓库源码 【[57](https://github.com/wudiufo/WebPack4-study/tree/master/my-project57)】
 
 详细请看官网：[VUE Cli](https://cli.vuejs.org/zh/guide/#cli)  [全局-cli-配置](https://cli.vuejs.org/zh/config/#全局-cli-配置)
