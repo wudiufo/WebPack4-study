@@ -1,0 +1,17 @@
+{
+  "name": "library-haiyang",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/library.js", //最终要给别人使用的
+  "scripts": {
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "haiyang",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.11",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2"
+  }
+}
