@@ -244,7 +244,7 @@ module.exports = {
             options: {
               name:'[name].[ext]',
               outputPath: 'images/',
-              limit: 8192 //小于8192kb,就可以转化成base64格式。大于就会打包成文件格式
+              limit: 8192 //小于8192b,就可以转化成base64格式。大于就会打包成文件格式
             }
           }
         ]
