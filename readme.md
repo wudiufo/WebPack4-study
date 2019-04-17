@@ -2812,6 +2812,19 @@ files.forEach(file => {
 })
 ```
 
+在 package.json 中 添加一个脚本：
+```
+"scripts": {
+    "dev-build": "webpack --config ./build/webpack.dev.js",
+    "dev": "webpack-dev-server --config ./build/webpack.dev.js",
+    "build": "webpack --config ./build/webpack.prod.js",
+ +   "build:dll": "webpack --config ./build/webpack.dll.js"
+  }
+```
+
+在 控制台 先 执行 npm run build:dll 生成对应的 XXX.dll.js 和 XXX.manifest.json 文件。以后再执行 npm run build 或 npm run dev 时，就不用再node_modules查找对应模块进行分析，直接用打包好的 XXX.dll.js就可以，节省打包速度。
+
+
 总结：
 
 > 如果不使用使用 DLLPlugin 插件，当引入第三方模块时，每一次打包都要进行分析，是消耗打包的性能的。使用 DLLPlugin 提高打包速度,在第一次打包时，把第三方模块单独打包生成一个文件 vendors.dll.js ，之后在打包时就可以直接从 vendors.dll.js 中引入之前打包好的第三方模块，速度就会变快。
