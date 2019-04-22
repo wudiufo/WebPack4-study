@@ -22,8 +22,9 @@ const devConfig = {
 						importLoaders: 2
 					}
 				},
+        'postcss-loader',
 				'sass-loader',
-				'postcss-loader'
+				
 			]
 		}, {
 			test: /\.css$/,

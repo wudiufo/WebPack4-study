@@ -343,8 +343,9 @@ module.exports = {
             use: [
                 "style-loader", // 将 JS 字符串生成为 style 节点
                 "css-loader", // 将 CSS 转化成 CommonJS 模块
-                "sass-loader", // 将 Sass 编译成 CSS，默认使用 Node Sass
-                'postcss-loader'
+                'postcss-loader',//注意postcss-loader放置位置，应放在css-loader之后，sass|less|stylus-loader之前。
+                "sass-loader" // 将 Sass 编译成 CSS，默认使用 Node Sass
+                
             ]
         }]
     }
@@ -370,8 +371,9 @@ module.exports = {
                         modules: true //开启css的模块打包。css样式不会和其他模块发生耦合和冲突
                     }
                 }, 
+                'postcss-loader',
                 "sass-loader", 
-                'postcss-loader'
+                
             ]
         }]
     }
@@ -568,8 +570,9 @@ module.exports = {
 						importLoaders: 2
 					}
 				},
+        'postcss-loader',
 				'sass-loader',
-				'postcss-loader'
+				
 			]
 		}]
 	},
@@ -785,8 +788,9 @@ module.exports = {
 						importLoaders: 2
 					}
 				},
+        'postcss-loader',
 				'sass-loader',
-				'postcss-loader'
+				
 			]
 		}, {
 			test: /\.css$/,
@@ -1069,8 +1073,9 @@ module.exports = {
 						importLoaders: 2
 					}
 				},
+        'postcss-loader',
 				'sass-loader',
-				'postcss-loader'
+				
 			]
 		}, {
 			test: /\.css$/,
@@ -1143,8 +1148,9 @@ module.exports = {
 						importLoaders: 2
 					}
 				},
+        'postcss-loader',
 				'sass-loader',
-				'postcss-loader'
+				
 			]
 		}, {
 			test: /\.css$/,
@@ -1234,8 +1240,9 @@ module.exports = {
 						importLoaders: 2
 					}
 				},
+        'postcss-loader',
 				'sass-loader',
-				'postcss-loader'
+				
 			]
 		}, {
 			test: /\.css$/,
@@ -1661,8 +1668,9 @@ const prodConfig = {
 						importLoaders: 2
 					}
 				},
+        'postcss-loader',
 				'sass-loader',
-				'postcss-loader'
+				
 			]
 		}, {
 			test: /\.css$/,
@@ -1714,8 +1722,9 @@ const devConfig = {
 						importLoaders: 2
 					}
 				},
+        'postcss-loader',
 				'sass-loader',
-				'postcss-loader'
+				
 			]
 		}, {
 			test: /\.css$/,
@@ -1894,8 +1903,9 @@ const devConfig = {
 						importLoaders: 2
 					}
 				},
+        'postcss-loader',
 				'sass-loader',
-				'postcss-loader'
+				
 			]
 		}, {
 			test: /\.css$/,
@@ -1940,8 +1950,9 @@ const prodConfig = {
 						importLoaders: 2
 					}
 				},
+        'postcss-loader',
 				'sass-loader',
-				'postcss-loader'
+				
 			]
 		}, {
 			test: /\.css$/,
@@ -2304,8 +2315,9 @@ const devConfig = {
 						importLoaders: 2
 					}
 				},
+        'postcss-loader',
 				'sass-loader',
-				'postcss-loader'
+				
 			]
 		}, {
 			test: /\.css$/,
@@ -2348,8 +2360,9 @@ const prodConfig = {
 						importLoaders: 2
 					}
 				},
+        'postcss-loader',
 				'sass-loader',
-				'postcss-loader'
+				
 			]
 		}, {
 			test: /\.css$/,
@@ -2388,7 +2401,7 @@ module.exports = prodConfig;
 
 仓库源码 【[41](https://github.com/wudiufo/WebPack4-study/tree/master/library%2041)】
 
-在 webpack.config.js 中：
+在 webpack.config.js 中： 
 
 ```js
 
