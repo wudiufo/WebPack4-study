@@ -244,7 +244,7 @@ module.exports = {
             options: {
               name:'[name].[ext]',
               outputPath: 'images/',
-              limit: 8192 //小于8192kb,就可以转化成base64格式。大于就会打包成文件格式
+              limit: 8192 //小于8192b,就可以转化成base64格式。大于就会打包成文件格式
             }
           }
         ]
@@ -2824,6 +2824,19 @@ files.forEach(file => {
 	}
 })
 ```
+
+在 package.json 中 添加一个脚本：
+```
+"scripts": {
+    "dev-build": "webpack --config ./build/webpack.dev.js",
+    "dev": "webpack-dev-server --config ./build/webpack.dev.js",
+    "build": "webpack --config ./build/webpack.prod.js",
+ +   "build:dll": "webpack --config ./build/webpack.dll.js"
+  }
+```
+
+在 控制台 先 执行 npm run build:dll 生成对应的 XXX.dll.js 和 XXX.manifest.json 文件。以后再执行 npm run build 或 npm run dev 时，就不用再node_modules查找对应模块进行分析，直接用打包好的 XXX.dll.js就可以，节省打包速度。
+
 
 总结：
 
