@@ -367,7 +367,7 @@ module.exports = {
                 {
                  	loader: "css-loader",
                     options:{
-                        importLoaders:2 ,//如果sass文件里还引入了另外一个sass文件，另一个文件还会从postcss-loader向上解析。如果不加，就直接从css-loader开始解析。
+                        importLoaders:2 ,//如果sass文件里还引入了另外一个sass文件，另一个文件还会从sass-loader向上解析。如果不加，就直接从css-loader开始解析// 0 => no loaders (default); 1 => postcss-loader; 2 => postcss-loader, sass-loader
                         modules: true //开启css的模块打包。css样式不会和其他模块发生耦合和冲突
                     }
                 }, 
